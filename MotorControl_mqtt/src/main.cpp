@@ -66,6 +66,7 @@ void IRAM_ATTR onTimer() {
 }
 
 //Control stuff
+//Ref: https://www.element14.com/community/community/arduino/blog/2020/01/06/simple-arduino-dc-motor-control-with-encoder-part-2
 unsigned long lastTime = 0;   
 float errSum, lastErr, Controlled_rpm, error;
 float kp = 0.5, ki= 0.01;
