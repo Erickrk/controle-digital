@@ -93,7 +93,8 @@ ledcWrite(0, spd);
 
 void loop() 
 {
-for(int count = 0; count<261; count++){
+  for(int count = 0; count<261; count++)
+  {
     fwd(vel);
     delay(2000);
     vel=vel+20;    
