@@ -1,3 +1,4 @@
+[![LinkedIn][linkedin-shield]][linkedin-url]
 # Controle_Digital
 Repositório com códigos da aplicação desenvolvida em C++ para a disciplina de Controle Digital do CEFET-RJ, unidade Maracanã. Um diagrama geral do projeto está disponível [aqui](https://drive.google.com/file/d/1NI6kZV08NlMY5wC1NHvddC2JuwzCzkOu/view?usp=sharing).
 
@@ -32,3 +33,24 @@ O desenvolvimento foi feito no plugin PlatformIO, o que explica a disposição i
 - Implementar FreeRTOS, talvez separar um core para conectividade e outro para controle;
 - Separar os códigos de conectividade e controle em dois microcontrolaroes separados, se comunicando; e
 - Motores de maior qualidade podem ter respostas mais agradáveis, pode ser interessante testar modelos diferentes. 
+
+## Agradecimentos: 
+A realização desse trabalho foi muito facilitada graças ao esforço do [Igor Kelvin](https://github.com/igorkelvin), com apoio à definição do escopo e requisitos do projeto, auxilio na parametrização do algoritmo de PID e na implementação de filtros digitais. Também, a ajuda do Isvaldo Ferndandes, CTO da @Squair, essencial para a aplicação da tecnologia do InfluxDB nessa solução.
+Agradeço imensamente aos dois, assim como a todos os responsáveis pelo conteúdo presente na seção de Referências.
+
+
+## Referências:
+- [Playlist de vídeos de outra solução de IoT com tecnologias diferentes (Node Red e IBM Watson)](https://www.youtube.com/watch?v=T-Xg15Iokhg&list=PLSfFtg91FAVEDSOPn_OqHtFy3zzFNB2Q-)
+- [Bíblia do Esp32](https://leanpub.com/kolban-ESP32)
+- [Código da aplicação Web feita pela turma de Controle Digital de 2019.2](https://github.com/igorkelvin/controle-digital-de-motor-dc)
+- [Interrupções externas no Esp32](https://diyprojects.io/esp32-how-use-external-interrupts-arduino-code/#.X6MfJ6vPyCo)
+- [Explanação geral sobre encoders ópticos](https://www.usinainfo.com.br/blog/sensor-de-velocidade-arduino-medindo-a-rotacao-de-motores/)
+- [Tutorial básico de PID em Arduino](https://www.arrow.com/en/research-and-events/articles/pid-controller-basics-and-tutorial-pid-implementation-in-arduino)
+- [Fonte principal do algoritmo de Controle aplicado](https://www.element14.com/community/community/arduino/blog/2020/01/06/simple-arduino-dc-motor-control-with-encoder-part-2)
+- [Vídeo que explica alguns conceitos de PID na prática](https://www.youtube.com/watch?v=AN3yxIBAxTA)
+- [Conceito bem próximo da aplicação apresentada aqui](https://www.youtube.com/watch?v=QSIksPKndEs)
+
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/silva-erick/
+
