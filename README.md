@@ -23,6 +23,7 @@ O desenvolvimento foi feito no plugin PlatformIO, o que explica a disposição i
 - Encoder4LinReg: utililzado para comparar a rotação medida pelo ESP, através do encoder, e os parâmetros passados para a função de movimento. Sua finalidade é auxiliar na coleta de dados que podem ser usados em uma regressão linear.
 - MotorControl: foi feito sem todas as funções de conectividade (WI-FI e MQTT a fim de conhecer melhor o sistema e os parâmetros PID do mesmo.
 - MotorControl_mqtt: código final apresentado na disciplina. Conta com a implementação da WI-FI, MQTT e PID no Esp32.
+- Server_side: aplicação que roda no lado do servidor. Se comunica com o Broker MQTT e integra ao InfluxDB.
 
 
 ## Algumas sugestões de melhoria no projeto:
