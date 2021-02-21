@@ -1,0 +1,95 @@
+import * as mqtt from 'mqtt'
+
+const logger = Logger.getInstance();
+var Topic = 'topic/pub'; //subscribe to all topics
+var Broker_URL = 'dns:15669';
+
+
+//----//----//----//----//----//----//----//----//----//----//----//----//----//----//----//----//----//----//----
+import {InfluxDB, Point, HttpError} from '@influxdata/influxdb-client'
+import tap = Mocha.reporters.tap;
+
+const token = ''
+const org = ''
+const bucket = ''
+
+const influxDBClient = new InfluxDB({url: '', token: token});
+
+//----//----//----//----//----//----//----//----//----//----//----//----//----//----//----//----//----//----//----
+
+
+async function sendPackage(data: any): Promise<any> {
+    const writeApi = influxDBClient.getWriteApi(org, bucket);
+
+    writeApi.useDefaultTags({host: 'test_erick'});
+
+
+    const point = new Point('rpm')
+        .intField("RPM", parseFloat(data));
+    writeApi.writePoint(point);
+    await writeApi.close()
+
+}
+
+
+
+let client = mqtt.connect('mqtt://dns:ppt', {
+    username: "user",
+    password: "pass",
+    port: 15629
+});
+
+
+client.on('connect', mqtt_connect);
+client.on('reconnect', mqtt_reconnect);
+client.on('error', mqtt_error);
+client.on('message', mqtt_messsageReceived);
+client.on('close', mqtt_close);
+
+function mqtt_connect() {
+    console.log("Connecting MQTT");
+    client.subscribe(Topic, mqtt_subscribe);
+}
+
+function mqtt_subscribe(err, granted) {
+    console.log("Subscribed to " + Topic);
+    if (err) {
+        console.log(err);
+    }
+}
+
+function mqtt_reconnect(err) {
+    console.error(err);
+    console.log("Reconnect MQTT");
+    if (err) {
+        console.log(err);
+    }
+    client = mqtt.connect(Broker_URL, {
+        username: "user",
+        password: "pass",
+        port: 15629
+    });
+}
+
+function mqtt_error(err) {
+    console.log("Error!");
+    if (err) {
+        console.log(err);
+    }
+}
+
+function after_publish() {
+    //do nothing
+}
+
+function mqtt_messsageReceived(topic, message, packet) {
+    const data = JSON.parse(message)["DATA"];
+    logger.info("new collect", data);
+    gambi(data).then(() => {
+    }).catch(() => {
+    })
+}
+
+function mqtt_close() {
+    console.log("Close MQTT");
+}
