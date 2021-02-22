@@ -1,7 +1,10 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 # Controle_Digital
-Repositório com códigos da aplicação desenvolvida em C++ para a disciplina de Controle Digital do CEFET-RJ, unidade Maracanã. Um diagrama geral do projeto está disponível [aqui](https://drive.google.com/file/d/1NI6kZV08NlMY5wC1NHvddC2JuwzCzkOu/view?usp=sharing).
+Repositório com códigos da aplicação desenvolvida em C++ para a disciplina de Controle Digital do CEFET-RJ, unidade Maracanã. Um diagrama geral do projeto está disponível abaixo:
 
+<p align="center">
+  <img src="https://github.com/Erickrk/Controle_Digital/blob/main/images/Projeto%20Digital.png" alt="Diagrama do Projeto"/>
+</p>
 
 O objetivo proposto foi construir uma solução capaz de fazer a telemetria e controle de um motor elétrico. Para esse fim foram utilizados o protocolo de comunicação MQTT e um algoritmo de controle PID. Adicionalmente, foi utilizado o InfluxDB para gestão do banco de dados e criação do dashboard.
 
@@ -17,6 +20,12 @@ O objetivo proposto foi construir uma solução capaz de fazer a telemetria e co
 
 
 O desenvolvimento foi feito no plugin PlatformIO, o que explica a disposição interna das pastas. As bibliotecas que não estão disponíveis pelo gerenciador do PlatformIO têm o link para o Github no código.
+
+
+## Print da aplicação funcionando:
+<p align="center">
+  <img src="https://github.com/Erickrk/Controle_Digital/blob/main/images/app.png" alt="Aplicação"/>
+</p>
 
 
 ## Este repositório contém:
@@ -44,6 +53,7 @@ Agradeço imensamente aos dois, assim como a todos os responsáveis pelo conteú
 - [Playlist de vídeos de outra solução de IoT com tecnologias diferentes (Node Red e IBM Watson)](https://www.youtube.com/watch?v=T-Xg15Iokhg&list=PLSfFtg91FAVEDSOPn_OqHtFy3zzFNB2Q-)
 - [Bíblia do Esp32](https://leanpub.com/kolban-ESP32)
 - [Código da aplicação Web feita pela turma de Controle Digital de 2019.2](https://github.com/igorkelvin/controle-digital-de-motor-dc)
+- [Código feito pela turma de Controle Digital de 2019.1](https://github.com/piradata/motor_control)
 - [Interrupções externas no Esp32](https://diyprojects.io/esp32-how-use-external-interrupts-arduino-code/#.X6MfJ6vPyCo)
 - [Explanação geral sobre encoders ópticos](https://www.usinainfo.com.br/blog/sensor-de-velocidade-arduino-medindo-a-rotacao-de-motores/)
 - [Tutorial básico de PID em Arduino](https://www.arrow.com/en/research-and-events/articles/pid-controller-basics-and-tutorial-pid-implementation-in-arduino)
